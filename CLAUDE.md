@@ -17,7 +17,7 @@ Antoine (développeur) réalise le projet : maquette Figma, puis développement.
 2. ✅ Mail envoyé avec les questions et la demande d'éléments (`docs/mail-client.md`)
 3. ⏳ En attente des réponses : logo, couleurs, photos, réseaux, type de site, budget, délai
    - ⏳ En parallèle : direction visuelle provisoire (nom de marque et images temporaires)
-     → 2 directions proposées à Antoine, choix en attente
+     → direction A « Impact » choisie, prototype HTML/CSS en cours dans `prototype/`
 4. ⬜ Maquette Figma (accueil desktop + mobile, page produit, prototype cliquable)
 5. ⬜ Validation de la maquette par le client
 6. ⬜ Choix technique définitif et développement
@@ -36,6 +36,24 @@ Mettre à jour cette liste au fil du projet.
 
 Règle : s'inspirer de la structure et de l'ambiance, **jamais** reprendre leurs logos,
 visuels, slogans ou textes. Le site doit rester celui de la marque du client.
+
+## Direction visuelle provisoire
+
+Choisie par Antoine le 28/10/2026, en attendant le logo et les photos du client.
+**Rien n'est encore validé par le client** : c'est une base de discussion.
+
+- Direction **A « Impact »** (sombre, esprit campagne) :
+  - Couleurs : noir profond `#0E0E0E` (fond), blanc cassé `#F5F3EE` (texte),
+    gris acier `#8A8A8A` (texte secondaire), orange signal `#FF4D1F` (boutons, accent).
+    Texte des boutons orange en noir (contraste suffisant, le blanc ne l'est pas).
+  - Typo (Google Fonts) : **Anton** pour les titres (capitales condensées), **Inter** pour le texte.
+  - Ambiance : campagnes photo plein écran, slogans de 2-3 mots, univers en grandes tuiles photo.
+- Direction écartée pour l'instant : B « Club » (fonds clairs crème, vert terrain `#1F4D3A`,
+  jaune `#F2B632`, Barlow Condensed / Barlow, plus catalogue). À ressortir si le client
+  préfère une ambiance claire.
+- Nom de marque provisoire : **ESSOR** (à remplacer partout par le vrai nom, comme `[MARQUE]`).
+- Photos temporaires : Unsplash (licence gratuite), copiées dans `prototype/img/` avec crédits.
+- Ton des textes : tutoiement, phrases courtes (à valider avec le client).
 
 ## Choix technique envisagé
 
