@@ -16,6 +16,8 @@ Antoine (développeur) réalise le projet : maquette Figma, puis développement.
 1. ✅ Premier appel avec le client
 2. ✅ Mail envoyé avec les questions et la demande d'éléments (`docs/mail-client.md`)
 3. ⏳ En attente des réponses : logo, couleurs, photos, réseaux, type de site, budget, délai
+   - ⏳ En parallèle : direction visuelle provisoire (nom de marque et images temporaires)
+     → 2 directions proposées à Antoine, choix en attente
 4. ⬜ Maquette Figma (accueil desktop + mobile, page produit, prototype cliquable)
 5. ⬜ Validation de la maquette par le client
 6. ⬜ Choix technique définitif et développement
@@ -54,12 +56,22 @@ Décision à confirmer après les réponses du client.
   ```
   claude mcp add --transport http figma https://mcp.figma.com/mcp
   ```
+  - Déjà déclaré dans `.mcp.json` (portée projet) : en local, lancer `claude` dans le repo,
+    approuver le serveur, puis `/mcp` → figma → *Authenticate* (connexion au compte Figma).
+  - Sessions Claude Code dans le cloud (claude.ai/code) : `.mcp.json` ne suffit pas
+    (domaine bloqué par le réseau, pas d'authentification possible). Brancher plutôt le
+    connecteur **Figma** sur https://claude.ai/customize/connectors, puis ouvrir une nouvelle session.
+  - Ce que le MCP permet : surtout **lire** une maquette (structure, styles, variables,
+    captures, contexte pour générer le code) et créer des diagrammes FigJam. Il ne sert pas
+    à dessiner des frames de maquette à la main → la maquette se fait dans Figma, ou on part
+    d'un prototype HTML importé dans Figma (plugin html.to.design).
 
 ## Arborescence
 
 ```
 CLAUDE.md               ← ce fichier
 README.md               ← présentation rapide du repo
+.mcp.json               ← déclaration du serveur MCP Figma pour Claude Code
 docs/brief.md           ← brief client : besoins, réponses, décisions
 docs/mail-client.md     ← mail envoyé au client (questions + éléments demandés)
 docs/maquette.md        ← plan de la maquette Figma
