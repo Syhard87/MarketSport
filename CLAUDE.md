@@ -18,9 +18,9 @@ Antoine (développeur) réalise le projet : maquette Figma, puis développement.
 3. ⏳ En attente des réponses : logo, couleurs, photos, réseaux, type de site, budget, délai
    - ✅ En parallèle : direction visuelle provisoire → direction A « Impact » choisie
 4. ⏳ Maquette Figma v1 construite directement dans Figma (voir `docs/maquette.md`) :
-   accueil et page produit en desktop + mobile, guide des tailles, prototype cliquable.
-   Reste à faire : mettre les photos (emplacements « Photo / … » encore vides), puis
-   partager le lien du prototype au client.
+   accueil et page produit en desktop + mobile, guide des tailles, prototype cliquable,
+   photos Unsplash provisoires posées (30/10/2026).
+   Reste à faire : relecture par Antoine, puis partage du lien du prototype au client.
 5. ⬜ Validation de la maquette par le client
 6. ⬜ Choix technique définitif et développement
 7. ⬜ Mise en ligne
@@ -54,9 +54,11 @@ Choisie par Antoine le 28/10/2026, en attendant le logo et les photos du client.
   jaune `#F2B632`, Barlow Condensed / Barlow, plus catalogue). À ressortir si le client
   préfère une ambiance claire.
 - Nom de marque provisoire : **ESSOR** (à remplacer partout par le vrai nom, comme `[MARQUE]`).
-- Photos temporaires : Unsplash (licence gratuite). Dans Figma, chaque emplacement photo est
-  un calque nommé `Photo / …` avec une indication de la photo attendue (calque « Indication
-  photo », à supprimer quand la photo est posée).
+- Photos temporaires : Unsplash (licence gratuite), choisies sans logo de marque visible.
+  Crédits dans `docs/maquette.md` et dans la « Photothèque » de la page Styles & composants.
+  Dans Figma, chaque emplacement photo est un calque nommé `Photo / …` ; le calque
+  « Indication photo » (masqué) décrit la photo attendue, utile pour les remplacer par
+  celles du client.
 - Ton des textes : tutoiement, phrases courtes (à valider avec le client).
 
 ## Choix technique envisagé
@@ -94,8 +96,11 @@ Décision à confirmer après les réponses du client.
     ou passer par le plugin Figma « Unsplash ». Sur un plan Starter / siège View, les outils
     de **lecture** du MCP sont limités à quelques appels par mois (à garder pour la phase
     de développement, ou prendre un siège Dev/Full sur un plan payant).
-- **Connecteur Unsplash** (claude.ai) : branché, mais inutilisable tant que l'adresse e-mail
-  du compte Unsplash n'est pas confirmée.
+- **Connecteur Unsplash** (claude.ai, compte d'Antoine) : recherche et enregistrement des
+  téléchargements. Il ne renvoie que des descriptions : télécharger les photos pour les
+  vérifier avant de les utiliser (logos de marque fréquents sur les vêtements).
+- **Réseau de l'environnement cloud** : domaines `images.unsplash.com` et `mcp.figma.com`
+  autorisés (nécessaires pour télécharger les photos et les envoyer dans Figma).
 
 ## Arborescence
 
