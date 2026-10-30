@@ -16,9 +16,11 @@ Antoine (développeur) réalise le projet : maquette Figma, puis développement.
 1. ✅ Premier appel avec le client
 2. ✅ Mail envoyé avec les questions et la demande d'éléments (`docs/mail-client.md`)
 3. ⏳ En attente des réponses : logo, couleurs, photos, réseaux, type de site, budget, délai
-   - ⏳ En parallèle : direction visuelle provisoire (nom de marque et images temporaires)
-     → direction A « Impact » choisie, prototype HTML/CSS en cours dans `prototype/`
-4. ⬜ Maquette Figma (accueil desktop + mobile, page produit, prototype cliquable)
+   - ✅ En parallèle : direction visuelle provisoire → direction A « Impact » choisie
+4. ⏳ Maquette Figma v1 construite directement dans Figma (voir `docs/maquette.md`) :
+   accueil et page produit en desktop + mobile, guide des tailles, prototype cliquable.
+   Reste à faire : mettre les photos (emplacements « Photo / … » encore vides), puis
+   partager le lien du prototype au client.
 5. ⬜ Validation de la maquette par le client
 6. ⬜ Choix technique définitif et développement
 7. ⬜ Mise en ligne
@@ -52,7 +54,9 @@ Choisie par Antoine le 28/10/2026, en attendant le logo et les photos du client.
   jaune `#F2B632`, Barlow Condensed / Barlow, plus catalogue). À ressortir si le client
   préfère une ambiance claire.
 - Nom de marque provisoire : **ESSOR** (à remplacer partout par le vrai nom, comme `[MARQUE]`).
-- Photos temporaires : Unsplash (licence gratuite), copiées dans `prototype/img/` avec crédits.
+- Photos temporaires : Unsplash (licence gratuite). Dans Figma, chaque emplacement photo est
+  un calque nommé `Photo / …` avec une indication de la photo attendue (calque « Indication
+  photo », à supprimer quand la photo est posée).
 - Ton des textes : tutoiement, phrases courtes (à valider avec le client).
 
 ## Choix technique envisagé
@@ -68,7 +72,9 @@ Décision à confirmer après les réponses du client.
 
 ## Outils
 
-- **Figma** (espace d'équipe d'Antoine) pour la maquette.
+- **Figma** (espace d'équipe d'Antoine, plan Starter) pour la maquette :
+  fichier « ESSOR — Maquette v1 (direction Impact) »
+  https://www.figma.com/design/eJajkcdg88JyZTawINA73P
 - **MCP Figma** : `https://mcp.figma.com/mcp` — à connecter dans Claude Code pour lire
   la maquette et s'en servir pour générer le code.
   ```
@@ -79,10 +85,17 @@ Décision à confirmer après les réponses du client.
   - Sessions Claude Code dans le cloud (claude.ai/code) : `.mcp.json` ne suffit pas
     (domaine bloqué par le réseau, pas d'authentification possible). Brancher plutôt le
     connecteur **Figma** sur https://claude.ai/customize/connectors, puis ouvrir une nouvelle session.
-  - Ce que le MCP permet : surtout **lire** une maquette (structure, styles, variables,
-    captures, contexte pour générer le code) et créer des diagrammes FigJam. Il ne sert pas
-    à dessiner des frames de maquette à la main → la maquette se fait dans Figma, ou on part
-    d'un prototype HTML importé dans Figma (plugin html.to.design).
+  - Ce que le MCP permet : **lire** une maquette (structure, styles, variables, captures,
+    contexte pour générer le code) **et écrire** dedans : créer un fichier, des variables,
+    des styles, des composants, des frames, des liens de prototype (outil `use_figma`).
+    La maquette v1 a été construite ainsi, sans passer par un prototype HTML.
+  - Limites constatées : le MCP ne peut pas télécharger d'images depuis Internet ; pour
+    poser une photo il faut envoyer le fichier depuis la session (domaine `mcp.figma.com`)
+    ou passer par le plugin Figma « Unsplash ». Sur un plan Starter / siège View, les outils
+    de **lecture** du MCP sont limités à quelques appels par mois (à garder pour la phase
+    de développement, ou prendre un siège Dev/Full sur un plan payant).
+- **Connecteur Unsplash** (claude.ai) : branché, mais inutilisable tant que l'adresse e-mail
+  du compte Unsplash n'est pas confirmée.
 
 ## Arborescence
 

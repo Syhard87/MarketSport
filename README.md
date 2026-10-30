@@ -7,4 +7,7 @@ Projet de site internet pour la marque de vêtements de sport [MARQUE].
 - Plan de la maquette Figma : [`docs/maquette.md`](docs/maquette.md)
 - Éléments fournis par le client : `assets/`
 
-Statut : en attente des éléments du client, maquette Figma à venir.
+- Maquette Figma v1 (direction provisoire « Impact », nom provisoire ESSOR) :
+  https://www.figma.com/design/eJajkcdg88JyZTawINA73P
+
+Statut : maquette v1 construite (photos à poser), en attente des éléments du client.
