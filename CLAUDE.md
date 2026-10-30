@@ -21,6 +21,9 @@ Antoine (développeur) réalise le projet : maquette Figma, puis développement.
    accueil et page produit en desktop + mobile, guide des tailles, prototype cliquable,
    photos Unsplash provisoires posées (30/10/2026).
    Reste à faire : relecture par Antoine, puis partage du lien du prototype au client.
+   - ✅ Dossier Google Drive partagé préparé pour le client (30/10/2026) : liens utiles,
+     présentation de la maquette, suite du projet (options techniques et coûts).
+     À partager avec le client par Antoine.
 5. ⬜ Validation de la maquette par le client
 6. ⬜ Choix technique définitif et développement
 7. ⬜ Mise en ligne
@@ -77,6 +80,17 @@ Décision à confirmer après les réponses du client.
 - **Figma** (espace d'équipe d'Antoine, plan Starter) pour la maquette :
   fichier « ESSOR — Maquette v1 (direction Impact) »
   https://www.figma.com/design/eJajkcdg88JyZTawINA73P
+- **Google Drive** (compte d'Antoine) : dossier « Projet site internet — dossier partagé »,
+  destiné à être partagé avec le client.
+  https://drive.google.com/drive/folders/1tv0zkGr2m3gSYV_bDNdnYYTmROzryLvf
+  - `1. Liens utiles` : maquette, documents, sites de référence, contacts (à compléter).
+  - `2. Présentation de la maquette v1` : contenu, direction visuelle, provisoire, retours.
+  - `3. La suite du projet` : étapes, vitrine / Shopify / WooCommerce, hébergement, base
+    de données, coûts (relevés en octobre 2026), points à décider.
+  - Sous-dossier `Éléments de la marque` : dépôt du logo, des photos et des textes du client
+    (à copier ensuite dans `assets/`).
+  - Le connecteur Google Drive de claude.ai crée des fichiers ; pour modifier un Google Doc
+    existant, il faut aussi le connecteur Google Docs.
 - **MCP Figma** : `https://mcp.figma.com/mcp` — à connecter dans Claude Code pour lire
   la maquette et s'en servir pour générer le code.
   ```
