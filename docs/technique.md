@@ -1,9 +1,44 @@
-# Plan technique — site développé sur mesure, hébergé chez OVH
+# Options techniques et plan de développement
 
-Décision d'Antoine (31/10/2026) : le site est **développé par Antoine**, sans plateforme
-e-commerce (ni Shopify, ni WooCommerce), et **hébergé chez OVH**. Le type de site (vitrine
-ou boutique) reste à décider avec le client : l'architecture ci-dessous permet de commencer
-en vitrine et d'ajouter la vente ensuite, sans tout refaire.
+**C'est le client qui choisit.** Ce document liste les options à lui proposer, de la moins
+chère à la plus chère, puis détaille le plan technique de l'option « boutique développée
+sur mesure, hébergée chez OVH », que préfère Antoine.
+
+## Options à proposer au client (coûts relevés en octobre 2026)
+
+Coûts annuels en ordre de grandeur, TTC, hors création du site. Le **prix de création**
+dépend du temps de travail d'Antoine : plus il y a de sur-mesure, plus il est élevé.
+
+| Option | Ce que ça permet | Coût annuel fixe | Frais par vente | Temps de création | Gestion par le client |
+|---|---|---|---|---|---|
+| 1. Vitrine codée, hébergement statique | Présenter la marque et les collections, pas de vente | Domaine seul (~10 €/an) avec un hébergement statique gratuit, ou ~50 à 90 €/an chez OVH (offre Perso) | Aucun | Court | Via un petit CMS gratuit, ou modifications faites par Antoine |
+| 2. Vitrine + boutons d'achat Stripe (liens de paiement) | Vendre quelques produits sans panier : un bouton « Acheter » par produit ouvre la page de paiement Stripe | Comme l'option 1 | Environ 1,5 % + 0,25 € par paiement (carte européenne) | Court | Commandes dans le tableau de bord Stripe, stocks suivis à la main |
+| 3. Boutique WooCommerce chez OVH | Boutique complète (panier, stocks, commandes) | ~100 à 145 €/an (offre Pro) + domaine | Frais du moyen de paiement (Stripe ou PayPal) | Moyen (thème WordPress adapté à la maquette) | Interface WordPress, mises à jour à suivre |
+| 4. Boutique développée sur mesure chez OVH | Boutique complète, entièrement codée par Antoine | ~100 à 145 €/an (offre Pro) + domaine | Environ 1,5 % + 0,25 € par paiement (Stripe) | Long | Interface d'administration Filament, maintenance par Antoine |
+| 5. Boutique Shopify | Boutique complète clé en main | ~324 €/an (paiement annuel) à ~432 €/an + domaine | Environ 1,5 % + 0,25 € par paiement | Court à moyen | Interface Shopify et application mobile |
+
+Les plus économiques :
+
+- **Pour démarrer sans vendre en ligne** : option 1, le domaine est presque le seul coût.
+- **Pour vendre un petit nombre de produits** (lancement, une collection) : option 2. Il n'y a
+  pas d'abonnement, seulement les frais Stripe sur les ventes, et on peut passer aux options 3
+  ou 4 plus tard en gardant le design.
+- **Pour une boutique complète** : options 3 et 4, au même coût annuel (l'hébergement OVH).
+  L'option 3 coûte moins cher à créer, l'option 4 donne plus de liberté mais demande plus de
+  temps de développement et de maintenance. Shopify (option 5) coûte moins cher à créer mais
+  environ trois fois plus cher par an.
+
+Sources des tarifs (blogs et comparatifs, à revérifier avant le devis) : OVH (grille revue en
+mai 2026, prix d'appel puis renouvellement plus cher), Shopify France, Stripe, domaine .fr
+chez OVH. Les frais spécifiques aux liens de paiement Stripe restent à vérifier sur stripe.com.
+
+---
+
+# Plan technique — boutique développée sur mesure, hébergée chez OVH (option 4)
+
+Option préférée d'Antoine si le client choisit le sur-mesure. Le type de site (vitrine ou
+boutique) reste à décider avec le client : l'architecture ci-dessous permet de commencer en
+vitrine et d'ajouter la vente ensuite, sans tout refaire.
 
 Stack proposée, **à confirmer par Antoine** : PHP + Laravel + MySQL.
 
