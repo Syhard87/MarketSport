@@ -25,7 +25,8 @@ Antoine (développeur) réalise le projet : maquette Figma, puis développement.
      présentation de la maquette, suite du projet (options techniques et coûts).
      À partager avec le client par Antoine.
 5. ⬜ Validation de la maquette par le client
-6. ⬜ Choix technique définitif et développement
+6. ⏳ Choix technique : développement sur mesure hébergé chez OVH (décidé par Antoine le
+   31/10/2026, stack à confirmer), puis développement
 7. ⬜ Mise en ligne
 
 Mettre à jour cette liste au fil du projet.
@@ -64,16 +65,20 @@ Choisie par Antoine le 28/10/2026, en attendant le logo et les photos du client.
   celles du client.
 - Ton des textes : tutoiement, phrases courtes (à valider avec le client).
 
-## Choix technique envisagé
+## Choix technique
 
-- Si **e-commerce** : Shopify (le client gère seul produits, stocks et commandes ;
-  paiement intégré). Travail d'Antoine : thème, configuration, personnalisation.
-  Alternative : WooCommerce.
-- Si **vitrine** : site statique (Vite) ou Shopify en mode simple selon le besoin
-  d'évolution vers la vente.
-- Éviter de recoder paiement / gestion de stock en sur-mesure.
+Décision d'Antoine (31/10/2026) : le site est **développé sur mesure par Antoine** et
+**hébergé chez OVH** (pas de Shopify ni de WooCommerce). Plan détaillé : `docs/technique.md`.
 
-Décision à confirmer après les réponses du client.
+- Stack proposée, **à confirmer** : PHP + Laravel + MySQL sur un hébergement mutualisé
+  OVH (offre Pro minimum, pour l'accès SSH). Back-office du client avec Filament.
+  Alternative : Symfony + EasyAdmin.
+- Paiement (si boutique) : **Stripe Checkout**, le site ne traite jamais de carte bancaire ;
+  le stock est décrémenté à la confirmation du paiement (webhook).
+- Phase 1 vitrine + catalogue, phase 2 boutique : le client peut encore choisir un site
+  vitrine sans que l'architecture change.
+- Le document client « 3. La suite du projet » (Google Drive) présente encore Shopify comme
+  solution recommandée : à mettre à jour avec cette option.
 
 ## Outils
 
@@ -125,6 +130,7 @@ README.md               ← présentation rapide du repo
 docs/brief.md           ← brief client : besoins, réponses, décisions
 docs/mail-client.md     ← mail envoyé au client (questions + éléments demandés)
 docs/maquette.md        ← plan de la maquette Figma
+docs/technique.md       ← plan technique : stack, hébergement OVH, base de données, pages
 assets/                 ← logo, photos, éléments fournis par le client
 ```
 
