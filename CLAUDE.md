@@ -16,9 +16,18 @@ Antoine (développeur) réalise le projet : maquette Figma, puis développement.
 1. ✅ Premier appel avec le client
 2. ✅ Mail envoyé avec les questions et la demande d'éléments (`docs/mail-client.md`)
 3. ⏳ En attente des réponses : logo, couleurs, photos, réseaux, type de site, budget, délai
-4. ⬜ Maquette Figma (accueil desktop + mobile, page produit, prototype cliquable)
+   - ✅ En parallèle : direction visuelle provisoire → direction A « Impact » choisie
+4. ⏳ Maquette Figma v1 construite directement dans Figma (voir `docs/maquette.md`) :
+   accueil et page produit en desktop + mobile, guide des tailles, prototype cliquable,
+   photos Unsplash provisoires posées (30/10/2026).
+   Reste à faire : relecture par Antoine, puis partage du lien du prototype au client.
+   - ✅ Dossier Google Drive partagé préparé pour le client (30/10/2026) : liens utiles,
+     présentation de la maquette, suite du projet (options techniques et coûts).
+     À partager avec le client par Antoine.
 5. ⬜ Validation de la maquette par le client
-6. ⬜ Choix technique définitif et développement
+6. ⏳ Choix technique : **c'est le client qui choisit** parmi les options de
+   `docs/technique.md` (de la vitrine codée à Shopify) ; préférence d'Antoine : site
+   développé sur mesure, hébergé chez OVH. Puis développement
 7. ⬜ Mise en ligne
 
 Mettre à jour cette liste au fil du projet.
@@ -35,34 +44,98 @@ Mettre à jour cette liste au fil du projet.
 Règle : s'inspirer de la structure et de l'ambiance, **jamais** reprendre leurs logos,
 visuels, slogans ou textes. Le site doit rester celui de la marque du client.
 
-## Choix technique envisagé
+## Direction visuelle provisoire
 
-- Si **e-commerce** : Shopify (le client gère seul produits, stocks et commandes ;
-  paiement intégré). Travail d'Antoine : thème, configuration, personnalisation.
-  Alternative : WooCommerce.
-- Si **vitrine** : site statique (Vite) ou Shopify en mode simple selon le besoin
-  d'évolution vers la vente.
-- Éviter de recoder paiement / gestion de stock en sur-mesure.
+Choisie par Antoine le 28/10/2026, en attendant le logo et les photos du client.
+**Rien n'est encore validé par le client** : c'est une base de discussion.
 
-Décision à confirmer après les réponses du client.
+- Direction **A « Impact »** (sombre, esprit campagne) :
+  - Couleurs : noir profond `#0E0E0E` (fond), blanc cassé `#F5F3EE` (texte),
+    gris acier `#8A8A8A` (texte secondaire), orange signal `#FF4D1F` (boutons, accent).
+    Texte des boutons orange en noir (contraste suffisant, le blanc ne l'est pas).
+  - Typo (Google Fonts) : **Anton** pour les titres (capitales condensées), **Inter** pour le texte.
+  - Ambiance : campagnes photo plein écran, slogans de 2-3 mots, univers en grandes tuiles photo.
+- Direction écartée pour l'instant : B « Club » (fonds clairs crème, vert terrain `#1F4D3A`,
+  jaune `#F2B632`, Barlow Condensed / Barlow, plus catalogue). À ressortir si le client
+  préfère une ambiance claire.
+- Nom de marque provisoire : **ESSOR** (à remplacer partout par le vrai nom, comme `[MARQUE]`).
+- Photos temporaires : Unsplash (licence gratuite), choisies sans logo de marque visible.
+  Crédits dans `docs/maquette.md` et dans la « Photothèque » de la page Styles & composants.
+  Dans Figma, chaque emplacement photo est un calque nommé `Photo / …` ; le calque
+  « Indication photo » (masqué) décrit la photo attendue, utile pour les remplacer par
+  celles du client.
+- Ton des textes : tutoiement, phrases courtes (à valider avec le client).
+
+## Choix technique
+
+**C'est le client qui décide.** Les options, de la moins chère à la plus chère, sont dans
+`docs/technique.md` (31/10/2026) :
+
+1. Vitrine codée, hébergement statique : domaine seul (~10 €/an) à ~90 €/an chez OVH.
+2. Vitrine + liens de paiement Stripe : idem + ~1,5 % + 0,25 € par vente, sans panier.
+3. Boutique WooCommerce chez OVH : ~100 à 145 €/an + frais de paiement.
+4. Boutique développée sur mesure chez OVH : même coût annuel que la 3, création plus longue.
+5. Boutique Shopify : ~324 à 432 €/an + frais de paiement, création plus courte.
+
+- Préférence d'Antoine : développer le site lui-même, hébergé chez OVH (options 1, 2 ou 4).
+  Plan technique de l'option 4 dans `docs/technique.md` : PHP + Laravel + MySQL (stack à
+  confirmer), back-office Filament, offre OVH Pro (SSH).
+- Dans tous les cas, le site ne traite jamais de carte bancaire : paiement par Stripe
+  (Checkout ou liens de paiement).
+- Le document client « 3. La suite du projet » (Google Drive) présente encore Shopify comme
+  solution recommandée : à mettre à jour avec ces options.
 
 ## Outils
 
-- **Figma** (espace d'équipe d'Antoine) pour la maquette.
+- **Figma** (espace d'équipe d'Antoine, plan Starter) pour la maquette :
+  fichier « ESSOR — Maquette v1 (direction Impact) »
+  https://www.figma.com/design/eJajkcdg88JyZTawINA73P
+- **Google Drive** (compte d'Antoine) : dossier « Projet site internet — dossier partagé »,
+  destiné à être partagé avec le client.
+  https://drive.google.com/drive/folders/1tv0zkGr2m3gSYV_bDNdnYYTmROzryLvf
+  - `1. Liens utiles` : maquette, documents, sites de référence, contacts (à compléter).
+  - `2. Présentation de la maquette v1` : contenu, direction visuelle, provisoire, retours.
+  - `3. La suite du projet` : étapes, vitrine / Shopify / WooCommerce, hébergement, base
+    de données, coûts (relevés en octobre 2026), points à décider.
+  - Sous-dossier `Éléments de la marque` : dépôt du logo, des photos et des textes du client
+    (à copier ensuite dans `assets/`).
+  - Le connecteur Google Drive de claude.ai crée des fichiers ; pour modifier un Google Doc
+    existant, il faut aussi le connecteur Google Docs.
 - **MCP Figma** : `https://mcp.figma.com/mcp` — à connecter dans Claude Code pour lire
   la maquette et s'en servir pour générer le code.
   ```
   claude mcp add --transport http figma https://mcp.figma.com/mcp
   ```
+  - Déjà déclaré dans `.mcp.json` (portée projet) : en local, lancer `claude` dans le repo,
+    approuver le serveur, puis `/mcp` → figma → *Authenticate* (connexion au compte Figma).
+  - Sessions Claude Code dans le cloud (claude.ai/code) : `.mcp.json` ne suffit pas
+    (domaine bloqué par le réseau, pas d'authentification possible). Brancher plutôt le
+    connecteur **Figma** sur https://claude.ai/customize/connectors, puis ouvrir une nouvelle session.
+  - Ce que le MCP permet : **lire** une maquette (structure, styles, variables, captures,
+    contexte pour générer le code) **et écrire** dedans : créer un fichier, des variables,
+    des styles, des composants, des frames, des liens de prototype (outil `use_figma`).
+    La maquette v1 a été construite ainsi, sans passer par un prototype HTML.
+  - Limites constatées : le MCP ne peut pas télécharger d'images depuis Internet ; pour
+    poser une photo il faut envoyer le fichier depuis la session (domaine `mcp.figma.com`)
+    ou passer par le plugin Figma « Unsplash ». Sur un plan Starter / siège View, les outils
+    de **lecture** du MCP sont limités à quelques appels par mois (à garder pour la phase
+    de développement, ou prendre un siège Dev/Full sur un plan payant).
+- **Connecteur Unsplash** (claude.ai, compte d'Antoine) : recherche et enregistrement des
+  téléchargements. Il ne renvoie que des descriptions : télécharger les photos pour les
+  vérifier avant de les utiliser (logos de marque fréquents sur les vêtements).
+- **Réseau de l'environnement cloud** : domaines `images.unsplash.com` et `mcp.figma.com`
+  autorisés (nécessaires pour télécharger les photos et les envoyer dans Figma).
 
 ## Arborescence
 
 ```
 CLAUDE.md               ← ce fichier
 README.md               ← présentation rapide du repo
+.mcp.json               ← déclaration du serveur MCP Figma pour Claude Code
 docs/brief.md           ← brief client : besoins, réponses, décisions
 docs/mail-client.md     ← mail envoyé au client (questions + éléments demandés)
 docs/maquette.md        ← plan de la maquette Figma
+docs/technique.md       ← options et coûts pour le client, plan technique du sur-mesure
 assets/                 ← logo, photos, éléments fournis par le client
 ```
 
